@@ -35,48 +35,38 @@ final class ViewController: UIViewController {
         setupFirstLabel()
         setupSecondLabel()
         setupThirdLabel()
-        //viewColorContainer.backgroundColor = UIColor(red: 0.6, green: 0.4, blue: 0.8, alpha: 0.4)
-//        viewColorContainer.backgroundColor = UIColor(red: CGFloat(sliderFirst.value), green: 0, blue: 0, alpha: 0.4)
+        
 
-        //print(sliderFirst.value)
         
     }
     
     @IBAction func sliderFirstAction(_ sender: UISlider) {
-        //viewColorContainer.backgroundColor = .red
-        firstCounterLabel.text = sliderFirst.value.formatted()
-//        viewColorContainer.backgroundColor = viewColorContainer.backgroundColor?.withAlphaComponent(CGFloat(sliderFirst.value))
-//        viewColorContainer.backgroundColor = UIColor(red: CGFloat(sliderFirst.value), green: CGFloat(sliderSecond.value), blue: CGFloat(sliderThird.value), alpha: ((CGFloat(sliderFirst.value) + CGFloat(sliderSecond.value) + CGFloat(sliderThird.value)) / 3))
+        firstCounterLabel.text = String(format: "%.2f", sliderFirst.value)
+        viewColorContainer.backgroundColor = UIColor(red: CGFloat(sliderFirst.value), green: CGFloat(sliderSecond.value), blue: CGFloat(sliderThird.value), alpha: (CGFloat(sliderFirst.value) + CGFloat(sliderSecond.value) + CGFloat(sliderThird.value)) / 3)
         
-        viewColorContainer.backgroundColor = UIColor(red: CGFloat(sliderFirst.value), green: CGFloat(sliderSecond.value), blue: CGFloat(sliderThird.value), alpha: 1)
+        
         
     }
     
     
     @IBAction func sliderSecondAction(_ sender: UISlider) {
-        secondCounterLabel.text = sliderSecond.value.formatted()
-//        viewColorContainer.backgroundColor = UIColor(red: CGFloat(sliderFirst.value), green: CGFloat(sliderSecond.value), blue: CGFloat(sliderThird.value), alpha: 1)
-        //viewColorContainer.backgroundColor = .green
-//        viewColorContainer.backgroundColor = viewColorContainer.backgroundColor?.withAlphaComponent(CGFloat(sliderSecond.value))
-        
+        secondCounterLabel.text = String(format: "%.2f", sliderSecond.value)
+        viewColorContainer.backgroundColor = UIColor(red: CGFloat(sliderFirst.value), green: CGFloat(sliderSecond.value), blue: CGFloat(sliderThird.value), alpha: (CGFloat(sliderFirst.value) + CGFloat(sliderSecond.value) + CGFloat(sliderThird.value)) / 3)
 
     }
     
     
     @IBAction func sliderThirdAction(_ sender: UISlider) {
-        thirdCounterLabel.text = sliderThird.value.formatted()
+        thirdCounterLabel.text = String(format: "%.2f", sliderThird.value)
+        viewColorContainer.backgroundColor = UIColor(red: CGFloat(sliderFirst.value), green: CGFloat(sliderSecond.value), blue: CGFloat(sliderThird.value), alpha: (CGFloat(sliderFirst.value) + CGFloat(sliderSecond.value) + CGFloat(sliderThird.value)) / 3)
 
-//        viewColorContainer.backgroundColor = viewColorContainer.backgroundColor?.withAlphaComponent(CGFloat(sliderThird.value))
-        
     }
     
     
     
     // MARK: - Private Methods
     
-//    private func viewContainerColorChange() {
-//        viewColorContainer.backgroundColor = UIColor(red: CGFloat(sliderFirst.value), green: CGFloat(sliderSecond.value), blue: CGFloat(sliderThird.value), alpha: 1)
-//    }
+
     
     private func setupFirstLabel() {
         firstCounterLabel.text = sliderFirst.value.formatted()
