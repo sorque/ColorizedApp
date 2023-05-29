@@ -77,13 +77,13 @@
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="k6y-iF-zok">
                                                 <rect key="frame" x="-2" y="70" width="307" height="31"/>
                                                 <connections>
-                                                    <action selector="sliderSecondAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Vv7-Nl-0Tg"/>
+                                                    <action selector="sliderFirstAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="1cU-S8-ohg"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gzC-Nn-SNg">
                                                 <rect key="frame" x="-2" y="140" width="307" height="31"/>
                                                 <connections>
-                                                    <action selector="sliderThirdAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="FAC-Dt-MXU"/>
+                                                    <action selector="sliderFirstAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="udx-wt-FAK"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
@@ -93,6 +93,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oH5-jW-TKW">
                                 <rect key="frame" x="76" y="362" width="240" height="128"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="oH5-jW-TKW" secondAttribute="height" multiplier="15:8" id="hJl-ml-1MN"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
