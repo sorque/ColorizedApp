@@ -36,18 +36,11 @@ final class ViewController: UIViewController {
         setupSecondLabel()
         setupThirdLabel()
         
-        firstCounterLabel.text = String(format: "%.2f", sliderFirst.value)
-        secondCounterLabel.text = String(format: "%.2f", sliderSecond.value)
-        thirdCounterLabel.text = String(format: "%.2f", sliderThird.value)
-        
-
-        
+        setColor()
     }
     
     @IBAction func sliderFirstAction(_ sender: UISlider) {
-        firstCounterLabel.text = String(format: "%.2f", sliderFirst.value)
-        secondCounterLabel.text = String(format: "%.2f", sliderSecond.value)
-        thirdCounterLabel.text = String(format: "%.2f", sliderThird.value)
+        setColor()
         viewColorContainer.backgroundColor = UIColor(red: CGFloat(sliderFirst.value), green: CGFloat(sliderSecond.value), blue: CGFloat(sliderThird.value), alpha: (CGFloat(sliderFirst.value) + CGFloat(sliderSecond.value) + CGFloat(sliderThird.value)) / 3)
         
         
@@ -122,6 +115,12 @@ final class ViewController: UIViewController {
         sliderThird.thumbTintColor = .brown
     }
     
+    
+    private func setColor() {
+        firstCounterLabel.text = String(format: "%.2f", sliderFirst.value)
+        secondCounterLabel.text = String(format: "%.2f", sliderSecond.value)
+        thirdCounterLabel.text = String(format: "%.2f", sliderThird.value)
+    }
 
     
 }
